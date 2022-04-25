@@ -31,7 +31,7 @@ BinaryHeap<T>::BinaryHeap(HeapTp type, const std::string &fileName): tp(type) {
 
 template<typename T>
 BinaryHeap<T>::BinaryHeap(HeapTp type, const std::list<int> &dataSet): tp(type) {
-    //Filling the array with data from vector
+    //Filling the array with data from list
     for(T element: dataSet){
         this->add(element);
     }

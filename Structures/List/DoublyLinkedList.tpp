@@ -19,7 +19,6 @@ DoublyLinkedList<T>::DoublyLinkedList(const std::string &fileName) {
 
     //Checking whether source file exists
     if (!srcFile.is_open()) {
-        std::cout << "File not found\n\n";
         return;
     }
 
@@ -36,7 +35,7 @@ DoublyLinkedList<T>::DoublyLinkedList(const std::string &fileName) {
 
 template<typename T>
 DoublyLinkedList<T>::DoublyLinkedList(const std::list <int> &dataSet) {
-    //Filling the array with data from vector
+    //Filling the array with data from list
     for(T element: dataSet){
         this->addBack(element);
     }
@@ -164,7 +163,6 @@ template<typename T>
 void DoublyLinkedList<T>::removeBack() {
     //Checking whether list is empty
     if (this->size == 0) {
-        std::cout << "List is empty!\n";
         return;
     }
 
@@ -190,7 +188,6 @@ template<typename T>
 void DoublyLinkedList<T>::removeFront() {
     //Checking whether list is empty
     if (this->size == 0) {
-        std::cout << "List is empty!\n";
         return;
     }
 
@@ -301,8 +298,10 @@ bool DoublyLinkedList<T>::find(const T &val) {
     }
 
     //Checking whether tail has the right value
-    if (this->tail->content == val) {
-        return true;
+    if(this -> tail != nullptr) {
+        if (this->tail->content == val) {
+            return true;
+        }
     }
 
     return false;

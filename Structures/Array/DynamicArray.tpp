@@ -40,7 +40,7 @@ DynamicArray<T>::DynamicArray(const std::list<int> &dataSet) {
     //Initializing head
     this->head = new T[0];
 
-    //Filling the array with data from vector
+    //Filling the array with data from list
     for(T element: dataSet){
         this->addBack(element);
     }
@@ -147,7 +147,6 @@ template<typename T>
 void DynamicArray<T>::removeBack() {
     //Checking whether array is empty
     if (this->size == 0) {
-        std::cout << "Empty array!\n";
         return;
     }
 
@@ -169,7 +168,6 @@ template<typename T>
 void DynamicArray<T>::removeFront() {
     //Checking whether array is empty
     if (this->size == 0) {
-        std::cout << "Empty array!\n";
         return;
     }
 
@@ -196,7 +194,6 @@ void DynamicArray<T>::remove(const size_t &position) {
 
     //Checking whether array is empty
     if (this->size == 0) {
-        std::cout << "Empty array!\n";
         return;
     }
 

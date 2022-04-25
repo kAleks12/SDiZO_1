@@ -62,7 +62,7 @@ RedBlackTree<T>::RedBlackTree(const std::list <int> &dataSet) {
     // Set root to gandalf
     this->root = this->gandalf;
 
-    //Filling the array with data from vector
+    //Filling the array with data from list
     for(T element: dataSet){
         this->add(element);
     }
@@ -177,6 +177,7 @@ void RedBlackTree<T>::remove(const T &value) {
     TreeNode<T> *tmp1;
     TreeNode<T> *tmp2;
 
+    //Checking whether left son or right son are leafs
     if (nodeToDelete->leftSon == this->gandalf || nodeToDelete->rightSon == this->gandalf) {
         tmp1 = nodeToDelete;
     } else {
@@ -223,7 +224,7 @@ void RedBlackTree<T>::print() {
     size_t depth = 0;
     getDepth(this->root, depth, 0);
 
-    // Calculating maximum number of nodes
+    // Calculating maximum size of the tree
     size_t size = pow(2, depth);
 
     // Creating tree table to get easy access to all nodes

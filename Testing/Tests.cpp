@@ -39,7 +39,6 @@ void Tests::performTests() {
     //Creating src file generator
     IDGen idg;
 
-
     //Performing tests for each structure
     mkdir("Array");
     DArray(idg);
@@ -224,7 +223,7 @@ void Tests::testOperation(IDGen &idg, ArrayOp operation) {
         default:
             break;
     }
-    intervals.resize(0);
+    intervals.clear();
 
     //Marking end time of testing operation
     auto end = std::chrono::system_clock::now();
@@ -554,8 +553,7 @@ void Tests::saveResult(const std::string &structureName) {
 
     //Printing opResult objects for each tested operation to the file
     for (const OpResult &result: results) {
-        saveFile <<  result.structure << ";"
-                  << result.opName << ";" << result.time << "\n";
+        saveFile << result.opName << ";" << result.time << "\n";
     }
 
     saveFile.close();

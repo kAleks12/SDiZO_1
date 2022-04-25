@@ -4,11 +4,12 @@
 
 
 int main() {
+/*
     auto testStart = std::chrono::system_clock::now();
     Tests test;
     test.maxElement = 10000;
     test.minElement = -10000;
-    test.sampleSize = 5000;
+    test.sampleSize = 100;
 
 
     for(int structureSize = 1000; structureSize <= 10000; structureSize += 1000){
@@ -21,6 +22,8 @@ int main() {
     std::chrono::duration<double> elapsedTime = testEnd - testStart;
 
     std::cout << "Finished testing -> " << elapsedTime.count()/double(60) << " [min]\n";
-    system("pause");
+*/
+    Menu::initMenu();
+
     return 0;
 }
