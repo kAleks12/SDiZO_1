@@ -5,6 +5,8 @@
 #ifndef SDIZO_PROJECT_1_TREE_NODE_HPP
 #define SDIZO_PROJECT_1_TREE_NODE_HPP
 
+#include <cstdint>
+
 #include "../../Enums.h"
 
 template<typename T>

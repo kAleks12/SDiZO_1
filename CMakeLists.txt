@@ -28,4 +28,5 @@ add_executable(
         UI/Menu.h
         UI/Menu.cpp
         Enums.h
-        SDiZO.h)
+        SDiZO.h
+)
